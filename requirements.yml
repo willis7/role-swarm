@@ -1,0 +1,4 @@
+---
+- src: https://github.com/willis7/role-docker
+  version: master
+  name: docker

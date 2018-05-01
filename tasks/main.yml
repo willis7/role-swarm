@@ -1,0 +1,9 @@
+---
+# tasks file for swarm
+- name: Get docker info
+  shell: docker info
+  register: docker_info
+  changed_when: False
+
+# install_type has 3 options first_manager, manager, worker
+- include: "{{ install_type }}.yml"

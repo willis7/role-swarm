@@ -1,0 +1,24 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: ansible_playbook
+  hosts: test-kitchen
+  require_chef_for_busser: false
+  require_ruby_for_busser: false
+  ansible_verbose: true
+  requirements_path: requirements.yml
+
+verifier:
+  name: inspec
+
+# workaround. see: https://github.com/test-kitchen/test-kitchen/issues/1035
+transport:
+  max_ssh_sessions: 6
+
+platforms:
+  - name: centos-7.4
+
+suites:
+- name: default

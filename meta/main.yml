@@ -1,0 +1,17 @@
+galaxy_info:
+  author: Sion Williams
+  description: Swarm
+  company: ONSDigital
+
+  license: MIT
+
+  min_ansible_version: 1.2
+
+  platforms:
+  - name: Centos
+    versions:
+    - 7.4
+
+  galaxy_tags: []
+
+dependencies: []

@@ -1,0 +1,8 @@
+---
+- hosts: test-kitchen
+  remote_user: root
+  roles:
+    - docker
+    - role: role-swarm
+      install_type: first_manager
+      docker_swarm_addr_iface: enp0s3 # eth0 doesn't exist with vagrant
